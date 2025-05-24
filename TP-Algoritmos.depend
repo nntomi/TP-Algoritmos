@@ -5,3 +5,22 @@
 
 1746558232 source:d:\onedrive\unlam 2\algoritmos\tp\tp-algoritmos\prueba.c
 
+1748115279 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\prueba.c
+	"prueba.h"
+
+1748115651 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\main.c
+	<stdio.h>
+	<stdlib.h>
+	"prueba.h"
+	"pila.h"
+
+1748115270 c:\users\marco\onedrive\documents\github\tp-algoritmos\prueba.h
+
+1746158676 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\pila.c
+	"Pila.h"
+
+1745341630 c:\users\marco\onedrive\documents\github\tp-algoritmos\pila.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
