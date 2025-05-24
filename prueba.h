@@ -24,4 +24,9 @@ typedef struct
 }tMaquina;
 
 
+
+void aplicarCarta(tCarta * ,tJugador *,tMaquina *,int *repetirTurno);
+void devolverEfecto (tMaquina *,tCarta *);
+
+
 #endif // PRUEBA_H_INCLUDED
