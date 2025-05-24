@@ -1,6 +1,7 @@
 #ifndef PRUEBA_H_INCLUDED
 #define PRUEBA_H_INCLUDED
 
+#include "Pila.h"
 
 
 
@@ -8,6 +9,23 @@ typedef struct
 {
     char carta[15];
 }tCarta;
+/*
+typedef enum
+{
+    MAS2, //+2 puntos
+    MAS1, // 1 punto
+    MENOS1, //-1
+    MENOS2, //-2
+    REPETIR,
+    ESPEJO
+}tipoCarta;
+
+typedef struct
+{
+    tipoCarta tipo;
+}tCarta;
+
+*/
 
 typedef struct
 {
@@ -23,10 +41,19 @@ typedef struct
     int dificultad;
 }tMaquina;
 
+typedef struct
+{
+    int cantidad;
+    char nCarta[15];
+}tCantidadXTipo;
+
+int comparaCartas(char * carta);
+int generarMazo(tPila* mazo,tCarta* mano1, tCarta* mano2,int inicio);
+int repartir(tPila* mazo,tCarta* cartas,int pos);
 
 
-void aplicarCarta(tCarta * ,tJugador *,tMaquina *,int *repetirTurno);
-void devolverEfecto (tMaquina *,tCarta *);
+//void aplicarCarta(tCarta * ,tJugador *,tMaquina *,int *repetirTurno);
+//void devolverEfecto (tMaquina *,tCarta *);
 
 
 #endif // PRUEBA_H_INCLUDED

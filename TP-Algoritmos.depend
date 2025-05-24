@@ -5,16 +5,19 @@
 
 1746558232 source:d:\onedrive\unlam 2\algoritmos\tp\tp-algoritmos\prueba.c
 
-1748115279 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\prueba.c
+1748122965 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\prueba.c
 	"prueba.h"
+	"pila.h"
+	"time.h"
 
-1748115651 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\main.c
+1748123074 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\main.c
 	<stdio.h>
 	<stdlib.h>
 	"prueba.h"
 	"pila.h"
 
-1748115270 c:\users\marco\onedrive\documents\github\tp-algoritmos\prueba.h
+1748122905 c:\users\marco\onedrive\documents\github\tp-algoritmos\prueba.h
+	"Pila.h"
 
 1746158676 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\pila.c
 	"Pila.h"
