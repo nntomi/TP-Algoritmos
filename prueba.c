@@ -144,3 +144,5 @@ int repartir(tPila* mazo,tCarta* cartas,int pos)
     return 0;
 }
 
+
+
