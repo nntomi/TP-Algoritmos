@@ -8,7 +8,7 @@ int main()
     int miturno=1;
     char cartaJugada[15];
     int turno=1;
-    int i,decision;
+    int i, decision, pos;
     tJugador jugador;
     tMaquina maquina;
     tPila mazo;
@@ -33,6 +33,7 @@ int main()
 
             miturno=0;
             printf("Cartas disponibles (seleccionar una):\n");
+            fflush(stdin);
             for(i=0;i<3;i++)
                 printf("%s\n",jugador.cartas[i].carta);
 
@@ -51,25 +52,47 @@ int main()
         }
 
         miturno=1;
+
         while(miturno==1 || strcmp(cartaJugada,"REPETIR")==0)
         {
 
             miturno=0;
+            pos = elegirCartaMedia(jugador, maquina);
+            //printf("NUMERO: %d\n", pos);
+
+           // printf("CHEQUEO\n");
+
+            printf("CARTAS DE LA MAQUINA \n");
+            for(i=0; i<3; i++)
+            {
+                printf("%s \n", maquina.cartas[i].carta);
+            }
 
             printf("Decision de la maquina:\n");
+            fflush(stdout);
 
-            strcpy(cartaJugada,maquina.cartas[decision-1].carta);
-            printf("\n\nJugo la carta: %s\n\n",cartaJugada);
+            strcpy(cartaJugada,maquina.cartas[pos].carta);
+            printf("\nJugo la carta: %s\n\n",cartaJugada);
 
-            desapilar(&mazo,maquina.cartas[decision-1].carta,sizeof(tCarta));
+            desapilar(&mazo,maquina.cartas[pos].carta,sizeof(tCarta));
             if(pilaVacia(&mazo))
                 generarMazo(&mazo,jugador.cartas,maquina.cartas,1);
         }
-
-
 
         turno++;
     }
 
     return 0;
 }
+
+//decisiones de la maquina de acuerdo a la dificultad
+//carta espejo: de que manera --> if espejos --> if -1 --> if-2
+// sumar y restar puntos
+// ranking APIS
+// interfaz grafica??
+
+//evita jugadas inefectivsa
+//no usa cartas de sacar puntos si el oponente tiene 0 puntos
+//prioriza catas que suman puntos si esta cerca de ganar
+//DIFICULTAD MEDIA
+

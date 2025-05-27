@@ -74,7 +74,5 @@ void vaciarPila(tPila *p)
         *p = aux->sig;
         free(aux->info);
         free(aux);
-
-
     }
 }

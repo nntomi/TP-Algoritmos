@@ -27,3 +27,25 @@
 	<stdlib.h>
 	<string.h>
 
+1748365647 source:d:\onedrive\documentos\github\tp-algoritmos\pila.c
+	"Pila.h"
+
+1748131491 d:\onedrive\documentos\github\tp-algoritmos\pila.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1748372560 source:d:\onedrive\documentos\github\tp-algoritmos\main.c
+	<stdio.h>
+	<stdlib.h>
+	"prueba.h"
+	"pila.h"
+
+1748371063 d:\onedrive\documentos\github\tp-algoritmos\prueba.h
+	"Pila.h"
+
+1748372366 source:d:\onedrive\documentos\github\tp-algoritmos\prueba.c
+	"prueba.h"
+	"pila.h"
+	"time.h"
+

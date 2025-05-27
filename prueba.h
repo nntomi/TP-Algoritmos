@@ -50,6 +50,8 @@ typedef struct
 int comparaCartas(char * carta);
 int generarMazo(tPila* mazo,tCarta* mano1, tCarta* mano2,int inicio);
 int repartir(tPila* mazo,tCarta* cartas,int pos);
+int elegirCartaMedia(tJugador jugador, tMaquina maquina);
+int buscarValor(int pos[], int valor);
 
 
 //void aplicarCarta(tCarta * ,tJugador *,tMaquina *,int *repetirTurno);
