@@ -14,13 +14,17 @@ int main()
     tPila mazo;
     crearPila(&mazo);
 
+    jugador.puntos=0;
+    maquina.puntos=0;
+
     generarMazo(&mazo,jugador.cartas,maquina.cartas,0);
     for(i=0;i<3;i++)
         repartir(&mazo,jugador.cartas,i);
     for(i=0;i<3;i++)
         repartir(&mazo,maquina.cartas,i);
 
-    while(jugador.puntos>=12 || maquina.puntos>=12)
+
+    while(jugador.puntos<12 && maquina.puntos<12)
     {
         printf("Turno:%d\n",turno);
         miturno=1;
@@ -39,6 +43,7 @@ int main()
             fflush(stdin);
             strcpy(cartaJugada,jugador.cartas[decision-1].carta);
             printf("\n\nJugo la carta: %s\n\n",cartaJugada);
+
 
             desapilar(&mazo,jugador.cartas[decision-1].carta,sizeof(tCarta));
             if(pilaVacia(&mazo))
