@@ -51,6 +51,7 @@ int comparaCartas(char * carta);
 int generarMazo(tPila* mazo,tCarta* mano1, tCarta* mano2,int inicio);
 int repartir(tPila* mazo,tCarta* cartas,int pos);
 int elegirCartaMedia(tJugador jugador, tMaquina maquina);
+int elegirCartaDificil(tJugador jugador, tMaquina maquina,char UltimacartaJugador[]);
 int buscarValor(int pos[], int valor);
 
 
