@@ -236,5 +236,151 @@ int buscarValor(int pos[], int valor)
 
 // dificultad media
 
+int elegirCartaDificil(tJugador jugador,tMaquina maquina,char UltimacartaJugador[])
+{
 
+    int i=0,posUno,posDos,posCero,pos[3]= {0,0,0},cartaBuena=0,vecBuenas[3]={0,0,0};
+
+
+    while(i<3)
+    {
+
+        if(strcmp(maquina.cartas[i].carta,"ESPEJO")==0)
+
+        {
+
+            pos[i]=1;
+
+
+        }
+
+
+
+        if(strcmp(maquina.cartas[i].carta,"REPETIR")==0)
+                {
+
+                    pos[i]= 2;
+
+                }
+
+
+        if(strcmp(maquina.cartas[i].carta,"MAS_2")==0)
+        {
+            vecBuenas[cartaBuena++]=i;
+            cartaBuena++;
+
+        }
+
+        if(strcmp(maquina.cartas[i].carta,"MAS_1")==0)
+        {   vecBuenas[cartaBuena++]=i;
+            cartaBuena++;
+        }
+    i++;
+    }
+
+    if(strcmp(UltimacartaJugador,"MENOS_1")==0 || strcmp(UltimacartaJugador,"MENOS_2")==0)
+    {
+
+        posCero = buscarValor(pos,1);
+        if(posCero!=-1)
+        {
+            return posCero; //Uso carta ESPEJO.
+        }
+    }
+
+
+    if(cartaBuena > 1 )
+    {
+
+
+        posUno = buscarValor(pos,2);
+        if(posUno != -1)
+        {
+
+            return posUno; // Uso REPETIR carta.
+        }
+        }
+    //for(i=0;i<3;i++)
+    //{
+    //    pos[i]=0;
+    //}
+
+
+        if(jugador.puntos>7)
+        {
+            i=0;
+            while(i<3)
+            {
+
+
+                if(strcmp(maquina.cartas[i].carta,"REPETIR")==0)
+                {
+
+                    pos[i]= 1;
+
+                }
+                if(strcmp(maquina.cartas[i].carta,"MENOS_2")==0)
+                {
+                    pos[i]=2;
+                }
+
+                if(strcmp(maquina.cartas[i].carta,"MENOS_1")==0)
+                {
+
+                    pos[i]=3;
+
+                }
+
+
+
+                i++;
+
+            }
+
+
+            posCero = buscarValor(pos,1); //REPETIR.
+
+            if(posCero != -1 )
+            {
+                return posCero;
+            }
+
+            posUno = buscarValor(pos,2); //MENOS_2.
+
+            if(posUno != -1)
+            {
+                return posUno;
+            }
+
+            posDos = buscarValor(pos,3); //MENOS_1.
+
+            if(posDos != -1)
+            {
+                return posDos;
+            }
+
+
+            }
+
+
+
+if(cartaBuena>=1)
+        {
+            posUno = buscarValor(pos,2);
+            if(posUno!=-1)
+            {
+                return posUno;
+            }
+
+
+
+            return vecBuenas[rand() % cartaBuena]; //Jugar alguna carta buena si no tengo otra opcion.
+
+        }
+
+
+     return rand()%3;
+        //Jugar cualquiera si no encuentro nada.
+    }
+//Dificultad Dificil.
 
