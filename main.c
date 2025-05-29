@@ -6,7 +6,7 @@
 int main()
 {
     int miturno=1;
-    char cartaJugada[15];
+    char cartaJugada[15], ultimacartaJugador[15]="";
     int turno=1;
     int i, decision, pos;
     tJugador jugador;
@@ -14,8 +14,8 @@ int main()
     tPila mazo;
     crearPila(&mazo);
 
-    jugador.puntos=0;
-    maquina.puntos=0;
+    jugador.puntos=8;
+    maquina.puntos=10;
 
     generarMazo(&mazo,jugador.cartas,maquina.cartas,0);
     for(i=0;i<3;i++)
@@ -33,16 +33,20 @@ int main()
 
             miturno=0;
             printf("Cartas disponibles (seleccionar una):\n");
-            fflush(stdin);
+            //fflush(stdin);
             for(i=0;i<3;i++)
                 printf("%s\n",jugador.cartas[i].carta);
 
             do{
                 scanf("%d",&decision);
+
             }while(decision<1 || decision>3);
 
-            fflush(stdin);
+            //fflush(stdin);
             strcpy(cartaJugada,jugador.cartas[decision-1].carta);
+            strcpy(ultimacartaJugador,cartaJugada);
+
+
             printf("\n\nJugo la carta: %s\n\n",cartaJugada);
 
 
@@ -57,7 +61,10 @@ int main()
         {
 
             miturno=0;
-            pos = elegirCartaMedia(jugador, maquina);
+            //pos = elegirCartaMedia(jugador, maquina);
+
+
+               pos = elegirCartaDificil(jugador,maquina,ultimacartaJugador);
             //printf("NUMERO: %d\n", pos);
 
            // printf("CHEQUEO\n");
@@ -69,7 +76,7 @@ int main()
             }
 
             printf("Decision de la maquina:\n");
-            fflush(stdout);
+            //fflush(stdout);
 
             strcpy(cartaJugada,maquina.cartas[pos].carta);
             printf("\nJugo la carta: %s\n\n",cartaJugada);
@@ -79,8 +86,18 @@ int main()
                 generarMazo(&mazo,jugador.cartas,maquina.cartas,1);
         }
 
+
+        printf("PUNTOS : Jugador = %d | Maquina = %d\n\n",jugador.puntos,maquina.puntos);
+
         turno++;
     }
+
+    if(jugador.puntos ==12)
+    {
+        printf("\n\t El jugador:%s gano",jugador.nombre);
+    }else printf("\n\t La maquina gano");
+
+
 
     return 0;
 }
