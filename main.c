@@ -1,4 +1,5 @@
 #include "Funciones_Juegos.h"
+#include "API.h"
 #include "pila.h"
 
 int main()
