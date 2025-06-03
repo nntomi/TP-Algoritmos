@@ -17,10 +17,10 @@ Se implementaron distintos niveles de dificultad en la IA los cuales son:
 - **Uso**: Se utilizo esta estructura de datos para mezclar y repartir las cartas de aleatoriamente e ir reponiendo las cartas que falten al jugador y la maquina en cada turno.
 - **Justificación**: El uso de una pila puede representar de forma real un juego de cartas porque siempre se agarra una carta desde el tope.
 
-### 2. **Estructuras (Structs)** --`Cartas, informe, jugador y maquina`
+### 2. **Estructuras (Structs)** - `Cartas, informe, jugador y maquina`
 - **Uso**: Las cartas, el informe, el jugador y la maquina se modelaron como estructuras para su implementación.
 - **Justificación**: Cada dato que tiene que ser representado y usado en el proyecto tiene un conjunto de datos que lo forman por eso es la forma mas adecuada de trabajarlos.
-###	3. **Lista Enlazada** --`Archivo del informe`
+###	3. **Lista Enlazada** - `Archivo del informe`
 - **Uso**: En el informe se usa una lista enlazada para tener los datos de cada turno.
 - **Justificación**: Debido a que se puede recorrer puedo ir obteniendo los datos de cada jugada para luego crear el archivo de dicho informe.
 
