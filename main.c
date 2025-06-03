@@ -10,8 +10,8 @@
     char decision = ' ';
 
 do {
-    printf("----------------Menu DoCe----------------\n\n");
-    printf("Opciones\n\n");
+    printf("\n\n\t\t----------------Menu DoCe----------------\n\n");
+    printf("\n\nOpciones\n\n");
     printf("[A] Jugar\n[B] Ver Ranking\n[C] Salir\n");
 
     do {
@@ -24,8 +24,8 @@ do {
 
     switch (decision) {
         case 'A':
-            printf("----------------Opciones de Dificultad----------------\n");
-            printf("\n[A] Facil\n[B] Medio\n[C] Dificil\n");
+            printf("\n\n\t\t----------------Opciones de Dificultad----------------\n");
+            printf("\n\n[A] Facil\n[B] Medio\n[C] Dificil\n");
 
             char dificultad;
             do {
@@ -54,6 +54,8 @@ do {
 } while (decision != 'C');
 
 return 0;
+
+
 
 }
 
