@@ -1,9 +1,9 @@
-#include "prueba.h"
+#include "Funciones_Juegos.h"
 
 #include <curl/curl.h>
-// Función que maneja la respuesta de la solicitud HTTP
+// FunciÃ³n que maneja la respuesta de la solicitud HTTP
 
-// Función que maneja la respuesta de la solicitud HTTP
+// FunciÃ³n que maneja la respuesta de la solicitud HTTP
 size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
 {
     size_t realsize = size * nmemb;
@@ -24,7 +24,7 @@ curl_easy_setopt(curl, CURLOPT_URL, "https://algoritmos-api.azurewebsites.net/ap
 struct curl_slist *headers = NULL;
 headers = curl_slist_append(headers, "X-Secret: FADSFAS");
 curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
-// Establecer la función de retorno de llamada para manejar la respuesta
+// Establecer la funciÃ³n de retorno de llamada para manejar la respuesta
 curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
 curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
 // Realizar la solicitud HTTP GET
