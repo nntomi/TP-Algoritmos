@@ -2,52 +2,58 @@
 #include "API.h"
 #include "pila.h"
 
-int main()
+
+    int main()
 {
     //resetearGrupo("limite");
-    char decision;
+
+    char decision = ' ';
+
+do {
     printf("----------------Menu DoCe----------------\n\n");
     printf("Opciones\n\n");
     printf("[A] Jugar\n[B] Ver Ranking\n[C] Salir\n");
-    do
-    {
-        printf("\nElija una de las opciones:");
-        scanf("%c",&decision);
-        fflush(stdin);
-        decision=AMAYUS(decision);
-    }while(decision!='A' && decision!='B' && decision!= 'C');
+
+    do {
+        printf("\nElija una de las opciones: ");
+        scanf(" %c", &decision); // espacio antes de %c para consumir '\n' anterior
+        decision = AMAYUS(decision);
+    } while (decision != 'A' && decision != 'B' && decision != 'C');
 
     system("cls");
-    switch(decision)
-    {
+
+    switch (decision) {
         case 'A':
-            decision=' ';
             printf("----------------Opciones de Dificultad----------------\n");
             printf("\n[A] Facil\n[B] Medio\n[C] Dificil\n");
-            do
-            {
-                printf("\nElija una de las opciones:");
-                scanf("%c",&decision);
-                fflush(stdin);
-                decision=AMAYUS(decision);
-            }while(decision!='A' && decision!='B' && decision!= 'C');
-            if(decision=='A')
+
+            char dificultad;
+            do {
+                printf("\nElija una de las opciones: ");
+                scanf(" %c", &dificultad);
+                dificultad = AMAYUS(dificultad);
+            } while (dificultad != 'A' && dificultad != 'B' && dificultad != 'C');
+
+            if (dificultad == 'A')
                 juego(elegirCartaFacil);
-            else if(decision=='B')
+            else if (dificultad == 'B')
                 juego(elegirCartaMedia);
             else
                 juego(elegirCartaDificil);
             break;
 
         case 'B':
-
-             verRanking();
+            verRanking();
             break;
 
         case 'C':
-
+            printf("\n\tSe finalizo el juego. Hasta luego!\n");
             break;
     }
 
-    return 0;
+} while (decision != 'C');
+
+return 0;
+
 }
+
