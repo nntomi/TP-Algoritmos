@@ -1,0 +1,166 @@
+Ganador:Marcos
+
+Puntaje Final Jugador Marcos:13
+Puntaje Final Maquina:1
+
+
+
+---------Resumen del Juego---------
+
+
+Turno:1
+Nombre:Marcos
+Carta Jugada:MAS_1
+Puntos Actuales:11
+
+
+Turno:1
+Nombre:Maquina
+Carta Jugada:REPETIR
+Puntos Actuales:0
+
+
+Turno:1
+Nombre:Maquina
+Carta Jugada:MENOS_1
+Puntos Actuales:0
+
+
+Turno:2
+Nombre:Marcos
+Carta Jugada:REPETIR
+Puntos Actuales:10
+
+
+Turno:2
+Nombre:Marcos
+Carta Jugada:REPETIR
+Puntos Actuales:9
+
+
+Turno:2
+Nombre:Marcos
+Carta Jugada:MAS_1
+Puntos Actuales:9
+
+
+Turno:2
+Nombre:Maquina
+Carta Jugada:REPETIR
+Puntos Actuales:0
+
+
+Turno:2
+Nombre:Maquina
+Carta Jugada:MENOS_1
+Puntos Actuales:0
+
+
+Turno:3
+Nombre:Marcos
+Carta Jugada:MENOS_2
+Puntos Actuales:8
+
+
+Turno:3
+Nombre:Maquina
+Carta Jugada:REPETIR
+Puntos Actuales:0
+
+
+Turno:3
+Nombre:Maquina
+Carta Jugada:MENOS_1
+Puntos Actuales:0
+
+
+Turno:4
+Nombre:Marcos
+Carta Jugada:MAS_2
+Puntos Actuales:9
+
+
+Turno:4
+Nombre:Maquina
+Carta Jugada:MAS_1
+Puntos Actuales:1
+
+
+Turno:5
+Nombre:Marcos
+Carta Jugada:MAS_1
+Puntos Actuales:10
+
+
+Turno:5
+Nombre:Maquina
+Carta Jugada:MENOS_1
+Puntos Actuales:1
+
+
+Turno:6
+Nombre:Marcos
+Carta Jugada:MENOS_2
+Puntos Actuales:9
+
+
+Turno:6
+Nombre:Maquina
+Carta Jugada:MENOS_1
+Puntos Actuales:0
+
+
+Turno:7
+Nombre:Marcos
+Carta Jugada:MAS_2
+Puntos Actuales:10
+
+
+Turno:7
+Nombre:Maquina
+Carta Jugada:MENOS_2
+Puntos Actuales:0
+
+
+Turno:8
+Nombre:Marcos
+Carta Jugada:MAS_1
+Puntos Actuales:9
+
+
+Turno:8
+Nombre:Maquina
+Carta Jugada:MAS_1
+Puntos Actuales:1
+
+
+Turno:9
+Nombre:Marcos
+Carta Jugada:MAS_2
+Puntos Actuales:11
+
+
+Turno:9
+Nombre:Maquina
+Carta Jugada:ESPEJO
+Puntos Actuales:1
+
+
+Turno:10
+Nombre:Marcos
+Carta Jugada:MENOS_2
+Puntos Actuales:11
+
+
+Turno:10
+Nombre:Maquina
+Carta Jugada:MAS_1
+Puntos Actuales:1
+
+
+Turno:11
+Nombre:Marcos
+Carta Jugada:MAS_2
+Puntos Actuales:13
+
+

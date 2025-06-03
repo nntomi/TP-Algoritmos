@@ -1,0 +1,16 @@
+Ganador:Tomas
+
+Puntaje Final Jugador Tomas:13
+Puntaje Final Maquina:0
+
+
+
+---------Resumen del Juego---------
+
+
+Turno:1
+Nombre:Tomas
+Carta Jugada:MAS_2
+Puntos Actuales:13
+
+

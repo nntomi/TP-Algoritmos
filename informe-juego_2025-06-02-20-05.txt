@@ -1,0 +1,16 @@
+Ganador:Gabriel
+
+Puntaje Final Jugador Gabriel:12
+Puntaje Final Maquina:0
+
+
+
+---------Resumen del Juego---------
+
+
+Turno:1
+Nombre:Gabriel
+Carta Jugada:MAS_1
+Puntos Actuales:12
+
+

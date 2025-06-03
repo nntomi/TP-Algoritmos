@@ -2,30 +2,20 @@
 #define PRUEBA_H_INCLUDED
 
 #include "Pila.h"
+#include "Lista_Dinamica.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <curl/curl.h>
+#define AMAYUS(c) (((c) >= 'a' && (c) <= 'z') ? ((c) - 32) : (c))
 
-
+#define MAX_URL 100
+#define MAX_CODIGO 50
 
 typedef struct
 {
     char carta[15];
 }tCarta;
-/*
-typedef enum
-{
-    MAS2, //+2 puntos
-    MAS1, // 1 punto
-    MENOS1, //-1
-    MENOS2, //-2
-    REPETIR,
-    ESPEJO
-}tipoCarta;
-
-typedef struct
-{
-    tipoCarta tipo;
-}tCarta;
-
-*/
 
 typedef struct
 {
@@ -36,6 +26,7 @@ typedef struct
 
 typedef struct
 {
+    char nombre[30];
     int puntos;
     tCarta cartas[3];
     int dificultad;
@@ -47,14 +38,34 @@ typedef struct
     char nCarta[15];
 }tCantidadXTipo;
 
+typedef struct
+{
+    int turno;
+    char nombre[30];
+    char carta[15];
+    int puntos;
+}tInforme;
+
+void verRanking();
+size_t WriteCallback(void *contents, size_t , size_t nmemb, void *userp);
+void guardarRanking(const char *codigoGrupo, const char *nombreJugador, int esGanador);
+void resetearGrupo(const char *codigoGrupo);
+
+
+
 int comparaCartas(char * carta);
 int generarMazo(tPila* mazo,tCarta* mano1, tCarta* mano2,int inicio);
 int repartir(tPila* mazo,tCarta* cartas,int pos);
-int elegirCartaMedia(tJugador jugador, tMaquina maquina);
-int elegirCartaDificil(tJugador jugador, tMaquina maquina,char UltimacartaJugador[]);
+void aplicarEfecto(char *carta, int* puntos, int* puntosoponente, int *miturno,char *cartaoponente);
+int elegirCartaJugador(tCarta* cartas,char* cartajugada);
+int hayCartaEspejo(tCarta* cartas);
+int elegirCartaFacil(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador);
+int elegirCartaMedia(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador);
+int elegirCartaDificil(tJugador *jugador,tMaquina *maquina,char *UltimacartaJugador);
 int buscarValor(int pos[], int valor);
-
-
+void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador));
+void muestraInforme(void * informe);
+int generarInforme(tLista* informe,tJugador* jugador, tMaquina* maquina);
 //void aplicarCarta(tCarta * ,tJugador *,tMaquina *,int *repetirTurno);
 //void devolverEfecto (tMaquina *,tCarta *);
 

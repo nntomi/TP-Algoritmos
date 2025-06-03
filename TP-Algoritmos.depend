@@ -5,18 +5,18 @@
 
 1746558232 source:d:\onedrive\unlam 2\algoritmos\tp\tp-algoritmos\prueba.c
 
-1748139217 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\prueba.c
+1748539764 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\prueba.c
 	"prueba.h"
 	"pila.h"
 	"time.h"
 
-1748365070 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\main.c
+1748541144 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\main.c
 	<stdio.h>
 	<stdlib.h>
 	"prueba.h"
 	"pila.h"
 
-1748122905 c:\users\marco\onedrive\documents\github\tp-algoritmos\prueba.h
+1748373696 c:\users\marco\onedrive\documents\github\tp-algoritmos\prueba.h
 	"Pila.h"
 
 1746158676 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\pila.c
@@ -27,25 +27,164 @@
 	<stdlib.h>
 	<string.h>
 
-1748365647 source:d:\onedrive\documentos\github\tp-algoritmos\pila.c
-	"Pila.h"
+1748905455 source:c:\users\usuario\desktop\tp-algoritmos 1\main.c
+	"prueba.h"
+	"pila.h"
 
-1748131491 d:\onedrive\documentos\github\tp-algoritmos\pila.h
+1748905479 c:\users\usuario\desktop\tp-algoritmos 1\prueba.h
+	"Pila.h"
+	"Lista_Dinamica.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<curl/curl.h>
+
+1748547371 c:\users\usuario\desktop\tp-algoritmos 1\pila.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1748372560 source:d:\onedrive\documentos\github\tp-algoritmos\main.c
+1748547371 source:c:\users\usuario\desktop\tp-algoritmos 1\pila.c
+	"Pila.h"
+
+1748912466 source:c:\users\usuario\desktop\tp-algoritmos 1\prueba.c
+	"prueba.h"
+	"pila.h"
+	"time.h"
+	"Lista_Dinamica.h"
+
+1748550067 source:c:\users\marco\onedrive\desktop\tp-algoritmos 1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"prueba.h"
 	"pila.h"
 
-1748371063 d:\onedrive\documentos\github\tp-algoritmos\prueba.h
+1748638951 c:\users\marco\onedrive\desktop\tp-algoritmos 1\prueba.h
+	"Pila.h"
+	"Lista_Dinamica.h"
+
+1748547371 c:\users\marco\onedrive\desktop\tp-algoritmos 1\pila.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1748547371 source:c:\users\marco\onedrive\desktop\tp-algoritmos 1\pila.c
 	"Pila.h"
 
-1748372366 source:d:\onedrive\documentos\github\tp-algoritmos\prueba.c
+1748640628 source:c:\users\marco\onedrive\desktop\tp-algoritmos 1\prueba.c
 	"prueba.h"
 	"pila.h"
 	"time.h"
+	"Lista_Dinamica.h"
+
+1748638776 source:c:\users\marco\onedrive\desktop\tp-algoritmos 1\lista_dinamica.c
+	"Lista_Dinamica.h"
+
+1748638534 c:\users\marco\onedrive\desktop\tp-algoritmos 1\lista_dinamica.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1748638776 source:c:\users\usuario\desktop\tp-algoritmos 1\lista_dinamica.c
+	"Lista_Dinamica.h"
+
+1748638534 c:\users\usuario\desktop\tp-algoritmos 1\lista_dinamica.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1748912511 source:c:\users\usuario\desktop\tp-algoritmos 1\api.c
+	"prueba.h"
+	<curl/curl.h>
+
+1748421710 c:\curl\include\curl\curl.h
+	"curlver.h"
+	"system.h"
+	<stdio.h>
+	<limits.h>
+	<sys/param.h>
+	<sys/types.h>
+	<time.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/select.h>
+	<sys/socket.h>
+	<sys/time.h>
+	"easy.h"
+	"multi.h"
+	"urlapi.h"
+	"options.h"
+	"header.h"
+	"websockets.h"
+	"mprintf.h"
+	"typecheck-gcc.h"
+
+1748421710 c:\curl\include\curl\curlver.h
+
+1748421710 c:\curl\include\curl\system.h
+	<ConditionalMacros.h>
+	<inttypes.h>
+	<inttypes.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+
+1748421710 c:\curl\include\curl\easy.h
+
+1748421710 c:\curl\include\curl\multi.h
+	"curl.h"
+
+1748421710 c:\curl\include\curl\urlapi.h
+	"curl.h"
+
+1748421710 c:\curl\include\curl\options.h
+
+1748421710 c:\curl\include\curl\header.h
+
+1748421710 c:\curl\include\curl\websockets.h
+
+1748421710 c:\curl\include\curl\mprintf.h
+	<stdarg.h>
+	<stdio.h>
+	"curl.h"
+
+1748421710 c:\curl\include\curl\typecheck-gcc.h
+
+1748925727 source:d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\api.c
+	"prueba.h"
+	<curl/curl.h>
+
+1748905479 d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\prueba.h
+	"Pila.h"
+	"Lista_Dinamica.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<curl/curl.h>
+
+1748547371 d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\pila.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1748638534 d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\lista_dinamica.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1748638776 source:d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\lista_dinamica.c
+	"Lista_Dinamica.h"
+
+1748905455 source:d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\main.c
+	"prueba.h"
+	"pila.h"
+
+1748547371 source:d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\pila.c
+	"Pila.h"
+
+1748912466 source:d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\prueba.c
+	"prueba.h"
+	"pila.h"
+	"time.h"
+	"Lista_Dinamica.h"
 

@@ -1,0 +1,202 @@
+Ganador:Maquina
+
+Puntaje Final Jugador Gabriel:0
+Puntaje Final Maquina:12
+
+
+
+---------Resumen del Juego---------
+
+
+Turno:1
+Nombre:Gabriel
+Carta Jugada:MENOS_1
+Puntos Actuales:0
+
+
+Turno:1
+Nombre:Maquina
+Carta Jugada:MENOS_1
+Puntos Actuales:10
+
+
+Turno:2
+Nombre:Gabriel
+Carta Jugada:MENOS_1
+Puntos Actuales:0
+
+
+Turno:2
+Nombre:Maquina
+Carta Jugada:MAS_1
+Puntos Actuales:10
+
+
+Turno:3
+Nombre:Gabriel
+Carta Jugada:MAS_2
+Puntos Actuales:2
+
+
+Turno:3
+Nombre:Maquina
+Carta Jugada:MENOS_1
+Puntos Actuales:10
+
+
+Turno:4
+Nombre:Gabriel
+Carta Jugada:MAS_1
+Puntos Actuales:2
+
+
+Turno:4
+Nombre:Maquina
+Carta Jugada:MAS_1
+Puntos Actuales:11
+
+
+Turno:5
+Nombre:Gabriel
+Carta Jugada:REPETIR
+Puntos Actuales:2
+
+
+Turno:5
+Nombre:Gabriel
+Carta Jugada:REPETIR
+Puntos Actuales:2
+
+
+Turno:5
+Nombre:Gabriel
+Carta Jugada:MENOS_1
+Puntos Actuales:2
+
+
+Turno:5
+Nombre:Maquina
+Carta Jugada:MAS_1
+Puntos Actuales:11
+
+
+Turno:6
+Nombre:Gabriel
+Carta Jugada:MAS_1
+Puntos Actuales:3
+
+
+Turno:6
+Nombre:Maquina
+Carta Jugada:MENOS_1
+Puntos Actuales:11
+
+
+Turno:7
+Nombre:Gabriel
+Carta Jugada:MENOS_2
+Puntos Actuales:2
+
+
+Turno:7
+Nombre:Maquina
+Carta Jugada:MENOS_1
+Puntos Actuales:9
+
+
+Turno:8
+Nombre:Gabriel
+Carta Jugada:MENOS_1
+Puntos Actuales:1
+
+
+Turno:8
+Nombre:Maquina
+Carta Jugada:REPETIR
+Puntos Actuales:8
+
+
+Turno:8
+Nombre:Maquina
+Carta Jugada:REPETIR
+Puntos Actuales:7
+
+
+Turno:8
+Nombre:Maquina
+Carta Jugada:MAS_1
+Puntos Actuales:7
+
+
+Turno:9
+Nombre:Gabriel
+Carta Jugada:REPETIR
+Puntos Actuales:1
+
+
+Turno:9
+Nombre:Gabriel
+Carta Jugada:MAS_1
+Puntos Actuales:2
+
+
+Turno:9
+Nombre:Maquina
+Carta Jugada:MAS_2
+Puntos Actuales:9
+
+
+Turno:10
+Nombre:Gabriel
+Carta Jugada:ESPEJO
+Puntos Actuales:2
+
+
+Turno:10
+Nombre:Maquina
+Carta Jugada:MAS_2
+Puntos Actuales:11
+
+
+Turno:11
+Nombre:Gabriel
+Carta Jugada:MAS_1
+Puntos Actuales:3
+
+
+Turno:11
+Nombre:Maquina
+Carta Jugada:MENOS_2
+Puntos Actuales:11
+
+
+Turno:12
+Nombre:Gabriel
+Carta Jugada:REPETIR
+Puntos Actuales:1
+
+
+Turno:12
+Nombre:Gabriel
+Carta Jugada:MENOS_2
+Puntos Actuales:0
+
+
+Turno:12
+Nombre:Maquina
+Carta Jugada:MAS_1
+Puntos Actuales:10
+
+
+Turno:13
+Nombre:Gabriel
+Carta Jugada:ESPEJO
+Puntos Actuales:0
+
+
+Turno:13
+Nombre:Maquina
+Carta Jugada:MAS_2
+Puntos Actuales:12
+
+
