@@ -1,4 +1,4 @@
-#include "prueba.h"
+#include "Funciones_Juegos.h"
 #include "pila.h"
 
 int main()
