@@ -22,3 +22,8 @@
 
 ## Configuraciones del juego
 - En caso de querer modificar algún parámetro del juego en el código hay una función llamada **aplicarEfecto**, en el cual si quieres modificar la cantidad de puntos que se suman o se restan al usar alguna carta podes hacerlo. También, se encuentran las de dificultades que están programadas con cierta lógica para que la maquina actué de tal forma en determinada situación.
+## Aclaraciones
+- La tabla de puntajes que aparece en la consola corresponde al inicio del turno, es decir, antes de que el jugador juegue una carta. Sin embargo, a la hora de que la maquina haga su movimiento, lo hace en base al puntaje parcial que se obtiene luego de la acción del jugador.
+- La carta espejo puede ser aplicada una sola vez por turno. Por lo tanto, no puede aplicarse una carta espejo a otra carta espejo aplicada previamente. Si esto sucede, es una decisión poco productiva por parte del jugador o de la máquina, y no sumará ni restará puntos.
+- Cuando alguien juega una carta negativa el puntaje no se ve actualizado hasta la siguiente ronda, hasta que el jugador o la maquina decida o no usar la carta espejo. Es decir, si la máquina juega una carta que reste puntos, el jugador en la siguiente ronda puede usar o no la carta espejo, en caso de que no lo haga en la posterior ronda a esa se aplicaran los efectos.
+ 
