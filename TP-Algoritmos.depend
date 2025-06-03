@@ -188,3 +188,94 @@
 	"time.h"
 	"Lista_Dinamica.h"
 
+1748925727 source:d:\onedrive\documentos\github\tp-algoritmos\api.c
+	"prueba.h"
+	<curl/curl.h>
+
+1748905479 d:\onedrive\documentos\github\tp-algoritmos\prueba.h
+	"Pila.h"
+	"Lista_Dinamica.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<curl/curl.h>
+
+1748547371 d:\onedrive\documentos\github\tp-algoritmos\pila.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1748638534 d:\onedrive\documentos\github\tp-algoritmos\lista_dinamica.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1748638776 source:d:\onedrive\documentos\github\tp-algoritmos\lista_dinamica.c
+	"Lista_Dinamica.h"
+
+1748905455 source:d:\onedrive\documentos\github\tp-algoritmos\main.c
+	"prueba.h"
+	"pila.h"
+
+1748547371 source:d:\onedrive\documentos\github\tp-algoritmos\pila.c
+	"Pila.h"
+
+1748962839 source:d:\onedrive\documentos\github\tp-algoritmos\prueba.c
+	"prueba.h"
+	"pila.h"
+	"time.h"
+	"Lista_Dinamica.h"
+
+1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\curl.h
+	"curlver.h"
+	"system.h"
+	<stdio.h>
+	<limits.h>
+	<sys/param.h>
+	<sys/types.h>
+	<time.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/select.h>
+	<sys/socket.h>
+	<sys/time.h>
+	"easy.h"
+	"multi.h"
+	"urlapi.h"
+	"options.h"
+	"header.h"
+	"websockets.h"
+	"mprintf.h"
+	"typecheck-gcc.h"
+
+1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\curlver.h
+
+1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\system.h
+	<ConditionalMacros.h>
+	<inttypes.h>
+	<inttypes.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+
+1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\easy.h
+
+1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\multi.h
+	"curl.h"
+
+1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\urlapi.h
+	"curl.h"
+
+1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\options.h
+
+1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\header.h
+
+1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\websockets.h
+
+1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\mprintf.h
+	<stdarg.h>
+	<stdio.h>
+	"curl.h"
+
+1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\typecheck-gcc.h
+

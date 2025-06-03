@@ -378,7 +378,7 @@ void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *Ultimacarta
     crearPila(&mazo);
     crearLista(&informe);
 
-    jugador.puntos=11;
+    jugador.puntos=0;
     maquina.puntos=0;
     printf("Introduzca su nombre:");
     scanf("%s",jugador.nombre);
