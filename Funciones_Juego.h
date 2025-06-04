@@ -8,21 +8,21 @@
 #include <stdio.h>
 #include <curl/curl.h>
 #define AMAYUS(c) (((c) >= 'a' && (c) <= 'z') ? ((c) - 32) : (c))
-
+#define CARTA_INVALIDA -1
 #define MAX_URL 100
 #define MAX_CODIGO 50
 
 typedef struct
 {
     char carta[15];
-}tCarta;
+} tCarta;
 
 typedef struct
 {
     char nombre[30];
     int puntos;
     tCarta cartas[3];
-}tJugador;
+} tJugador;
 
 typedef struct
 {
@@ -30,13 +30,13 @@ typedef struct
     int puntos;
     tCarta cartas[3];
     int dificultad;
-}tMaquina;
+} tMaquina;
 
 typedef struct
 {
     int cantidad;
     char nCarta[15];
-}tCantidadXTipo;
+} tCantidadXTipo;
 
 typedef struct
 {
@@ -44,30 +44,19 @@ typedef struct
     char nombre[30];
     char carta[15];
     int puntos;
-}tInforme;
-
-void verRanking();
-size_t WriteCallback(void *contents, size_t , size_t nmemb, void *userp);
-void guardarRanking(const char *codigoGrupo, const char *nombreJugador, int esGanador);
-void resetearGrupo(const char *codigoGrupo);
-
-
+} tInforme;
 
 int comparaCartas(char * carta);
 int generarMazo(tPila* mazo,tCarta* mano1, tCarta* mano2,int inicio);
 int repartir(tPila* mazo,tCarta* cartas,int pos);
 void aplicarEfecto(char *carta, int* puntos, int* puntosoponente, int *miturno,char *cartaoponente);
 int elegirCartaJugador(tCarta* cartas,char* cartajugada);
-int hayCartaEspejo(tCarta* cartas);
 int elegirCartaFacil(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador);
 int elegirCartaMedia(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador);
 int elegirCartaDificil(tJugador *jugador,tMaquina *maquina,char *UltimacartaJugador);
-int buscarValor(int pos[], int valor);
-void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador));
+int buscarValor(int *pos, int valor);
+void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador)); //Es generica para la elección de dificultad.
 void muestraInforme(void * informe);
 int generarInforme(tLista* informe,tJugador* jugador, tMaquina* maquina);
-//void aplicarCarta(tCarta * ,tJugador *,tMaquina *,int *repetirTurno);
-//void devolverEfecto (tMaquina *,tCarta *);
-
-
+void Amayuscula_cad(char *cadena);
 #endif // PRUEBA_H_INCLUDED
