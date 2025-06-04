@@ -4,7 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 #define MINIMO(x,y) ((x) < (y) ? (x) : (y))
-
+#define ERROR 0
+#define OK 1
+#define LISTA_VACIA 0
 typedef struct ssNodo
 {
     void *info;
@@ -14,7 +16,6 @@ typedef struct ssNodo
 } ttNodo;
 
 typedef ttNodo *tLista;
-
 
 void crearLista(tLista *p);
 int Listavacia(const tLista *p);
@@ -26,8 +27,8 @@ int verPrimeroLista(tLista *p, void *d,unsigned cantBytes);
 int ponerAlFinal(tLista *p, const void *d, unsigned cantBytes);
 int sacarUltimoLista(tLista *p,void *d,unsigned cantBytes);
 void mmap(tLista* lista,void accion(void*a));
-
 int cmp_int(void *a,void*b);
 int insertarordenadolista(tLista *lista,void *dato,unsigned cantBytes,int cmp(void*,void*));
-int eliminardatolista(tLista *lista, void *dato,unsigned cantBytes,int cmp(void*,void*));
+
 #endif // PILA_DINAMICA_H_INCLUDED
+
