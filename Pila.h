@@ -1,3 +1,5 @@
+#ifndef PILA_H_INCLUDED
+#define PILA_H_INCLUDED
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,7 +13,7 @@ typedef struct sNodo
     unsigned tamInfo;
     struct sNodo *sig;
 
-} tNodo;
+}tNodo;
 typedef tNodo *tPila;
 
 void crearPila(tPila *p);
