@@ -42,13 +42,13 @@ int ponerAlcomienzo(tLista *p, const void *d,unsigned cantBytes)
     if(!nuevo)
     {
         free(nuevo);
-        return 0;
+        return ERROR;
     }
     nuevo->info = malloc(cantBytes);
     if(!nuevo->info)
     {
         free(nuevo->info);
-        return 0;
+        return ERROR;
     }
 
     memcpy(nuevo->info,d,cantBytes);
@@ -56,7 +56,7 @@ int ponerAlcomienzo(tLista *p, const void *d,unsigned cantBytes)
     nuevo->sig = *p;
     *p = nuevo;
 
-    return 1;
+    return OK;
 
 }
 int sacarPrimeroLista(tLista *p, void *d,unsigned cantBytes)
@@ -64,7 +64,7 @@ int sacarPrimeroLista(tLista *p, void *d,unsigned cantBytes)
     ttNodo *aux = *p;
     if(aux ==NULL)
     {
-        return 0;
+        return LISTA_VACIA;
     }
     *p = aux->sig;
     memcpy(d,aux->info,MINIMO(cantBytes,aux->tamInfo));
@@ -77,12 +77,12 @@ int verPrimeroLista(tLista *p, void *d,unsigned cantBytes)
 {
     if(*p == NULL)
     {
-        return 0;
+        return LISTA_VACIA;
     }
 
     memcpy(d, (*p)->info,MINIMO(cantBytes,(*p)->tamInfo));
 
-    return 1;
+    return OK;
 
 
 }
@@ -97,21 +97,21 @@ int ponerAlFinal(tLista *p, const void *d, unsigned cantBytes)
     if((nuevo=(ttNodo*)malloc(sizeof(ttNodo)))==NULL || (nuevo->info=malloc(cantBytes))==NULL)
     {
         free(nuevo);
-        return 0;
+        return ERROR;
     }
 
     memcpy(nuevo->info,d,cantBytes);
     nuevo->tamInfo = cantBytes;
     nuevo->sig = NULL;
     *p = nuevo;
-    return 1;
+    return OK;
 
 }
 int sacarUltimoLista(tLista *p,void *d,unsigned cantBytes)
 {
     if(*p == NULL)
     {
-        return 0;
+        return LISTA_VACIA;
     }
     while((*p)->sig)
     {
@@ -122,7 +122,7 @@ int sacarUltimoLista(tLista *p,void *d,unsigned cantBytes)
     free(*p);
     *p = NULL;
 
-    return 1;
+    return OK;
 }
 
 int cmp_int(void *a,void *b)
@@ -148,50 +148,21 @@ int insertarordenadolista(tLista *lista,void *dato,unsigned cantBytes,int cmp(vo
     if(!nuevo)
     {
         free(nuevo);
-        return 0;
+        return ERROR;
     }
     nuevo->info = malloc(cantBytes);
     if(!nuevo->info)
     {
         free(nuevo->info);
-        return 0;
+        return ERROR;
     }
     memcpy(nuevo->info,dato,cantBytes);
     nuevo->tamInfo= cantBytes;
     nuevo->sig = *lista;
     *lista = nuevo;
 
-    return 1;
+    return OK;
 }
-/*int eliminardatolista(tLista *lista,void *dato,unsigned cantBytes,int cmp(void*a,void*b))
-{
-    ttNodo *nuevo;
-    while(*lista!=NULL)
-    {
-
-        if(cmp(dato,(*lista)->info)==0)
-        {
-
-            free((*lista)->info);
-            free(*lista);
-            *lista = (*lista)->sig;
-
-
-            return 1;
-
-        }
-
-        lista = &(*lista)->sig;
-
-    }
-
-
-
-
-
-    return 0; //No se encontro el dato.
-
-}*/
 
 void mmap(tLista* lista,void accion(void*a))
 {
