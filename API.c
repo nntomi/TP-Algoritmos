@@ -1,8 +1,4 @@
-#include "Funciones_Juegos.h"
-
 #include <curl/curl.h>
-// Función que maneja la respuesta de la solicitud HTTP
-
 // Función que maneja la respuesta de la solicitud HTTP
 size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
 {
@@ -10,40 +6,40 @@ size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
     printf("%.*s", (int)realsize, (char *)contents);
     return realsize;
 }
-void verRanking()
+
+void verRanking() //GET.
 {
     CURL *curl;
-CURLcode res;
+    CURLcode res;
 // Inicializar el manejo de curl
-curl_global_init(CURL_GLOBAL_DEFAULT);
-curl = curl_easy_init();
-if (curl)
-{
+    curl_global_init(CURL_GLOBAL_DEFAULT);
+    curl = curl_easy_init();
+    if (curl)
+    {
 // Establecer la URL de la solicitud GET
-curl_easy_setopt(curl, CURLOPT_URL, "https://algoritmos-api.azurewebsites.net/api/doce/limite");
-struct curl_slist *headers = NULL;
-headers = curl_slist_append(headers, "X-Secret: FADSFAS");
-curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+        curl_easy_setopt(curl, CURLOPT_URL, "https://algoritmos-api.azurewebsites.net/api/doce/limite");
+        struct curl_slist *headers = NULL;
+        headers = curl_slist_append(headers, "X-Secret: FADSFAS");
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 // Establecer la función de retorno de llamada para manejar la respuesta
-curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
-curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
 // Realizar la solicitud HTTP GET
-res = curl_easy_perform(curl);
+        res = curl_easy_perform(curl);
 
 // Verificar si la solicitud fue exitosa
-if (res != CURLE_OK)
-fprintf(stderr, "Error en la solicitud: %s\n",
-curl_easy_strerror(res));
+        if (res != CURLE_OK)
+            fprintf(stderr, "Error en la solicitud: %s\n",
+                    curl_easy_strerror(res));
 // Limpiar y cerrar el manejo de curl
-curl_easy_cleanup(curl);
+        curl_easy_cleanup(curl);
 // Finalizar el manejo global de curl
-curl_global_cleanup();
-}
-
+        curl_global_cleanup();
     }
 
+}
 
-void guardarRanking(const char *codigoGrupo, const char *nombreJugador, int esGanador)
+void guardarRanking(const char *codigoGrupo, const char *nombreJugador, int esGanador) //POST.
 {
     CURL *curl;
     CURLcode res;
@@ -82,7 +78,7 @@ void guardarRanking(const char *codigoGrupo, const char *nombreJugador, int esGa
 
     curl_global_cleanup();
 }
-void resetearGrupo(const char *codigoGrupo)
+void resetearGrupo(const char *codigoGrupo) //DELETE.
 {
     CURL *curl;
     CURLcode res;
@@ -115,3 +111,4 @@ void resetearGrupo(const char *codigoGrupo)
 
     curl_global_cleanup();
 }
+
