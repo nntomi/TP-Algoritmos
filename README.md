@@ -9,7 +9,7 @@
 ## Cartas 
 - El juego consta de 40 cartas de juego y cada una tiene su propio efecto.
  - Efectos:
-	 - MAS_UNO: El que juegue esta carta se le sumara un punto y hay disponible 6 cartas de este tipo.
+	 - ¨**MAS_UNO:** El que juegue esta carta se le sumara un punto y hay disponible 6 cartas de este tipo.
 	 - **MAS_DOS:** El que juegue esta carta se le sumara dos puntos y hay disponible 10 cartas.
 	 - **MENOS_UNO:** Se le resta un punto al contrincante y hay disponible 8 cartas.
 	 - **MENOS_DOS:** Se le resta dos puntos al contrincante y hay disponible 6 cartas.
