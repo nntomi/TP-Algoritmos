@@ -1,19 +1,17 @@
-#ifndef PILA_H_INCLUDED
-#define PILA_H_INCLUDED
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 #define minimo(a, b) ((a) < (b) ? (a) : (b))
+#define OK 1
+#define ERROR 0
+#define PILA_VACIA 0
+typedef struct sNodo
+{
+    void *info;
+    unsigned tamInfo;
+    struct sNodo *sig;
 
-
-typedef struct sNodo{
-void *info;
-unsigned tamInfo;
-struct sNodo *sig;
-
-}tNodo;
+} tNodo;
 typedef tNodo *tPila;
 
 void crearPila(tPila *p);
