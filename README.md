@@ -1,4 +1,5 @@
-# Instrucciones de como jugar al juego
+# Juego de cartas DoCe
+## Instrucciones de como jugar al juego
 - Al iniciar el juego se abre un menú con diferentes opciones, en los cuales se encuentran las opciones de **jugar, ver ranking y salir**.
 
 ## Jugar 
@@ -26,4 +27,12 @@
 - La tabla de puntajes que aparece en la consola corresponde al inicio del turno, es decir, antes de que el jugador juegue una carta. Sin embargo, a la hora de que la maquina haga su movimiento, lo hace en base al puntaje parcial que se obtiene luego de la acción del jugador.
 - La carta espejo puede ser aplicada una sola vez por turno. Por lo tanto, no puede aplicarse una carta espejo a otra carta espejo aplicada previamente. Si esto sucede, es una decisión poco productiva por parte del jugador o de la máquina, y no sumará ni restará puntos.
 - Cuando alguien juega una carta negativa el puntaje no se ve actualizado hasta la siguiente ronda, hasta que el jugador o la maquina decida o no usar la carta espejo. Es decir, si la máquina juega una carta que reste puntos, el jugador en la siguiente ronda puede usar o no la carta espejo, en caso de que no lo haga en la posterior ronda a esa se aplicaran los efectos.
- 
+## Requisitos
+Este proyecto funciona con curl, si no lo tiene, seguir estas instrucciones, en caso de ejecutarlo utilizando el IDE Codeblocks:
+
+Descargar curl desde: https://curl.se/windows (En caso de no usar Windows, https://curl.se/download.html).
+Descomprimir el zip y pasar esa carpeta a una ubicación segura.
+Agregar dentro de PATH (como variable de entorno) la ubicación a la carpeta “bin”.
+En Codeblocks: Settings > Compiler > Linker Settings: agregar ubicación a “lib\libcurl.dll.a”.
+En Codeblocks: Settings > Compiler > Search directories > Compiler y Resource compiler: agregar ubicación a “include”.
+En Codeblocks: Settings > Compiler > Search directories > Linker: agregar ubicación a “lib”.
