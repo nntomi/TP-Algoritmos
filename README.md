@@ -30,9 +30,9 @@
 ## Requisitos
 Este proyecto funciona con curl, si no lo tiene, seguir estas instrucciones, en caso de ejecutarlo utilizando el IDE Codeblocks:
 
-Descargar curl desde: https://curl.se/windows (En caso de no usar Windows, https://curl.se/download.html).
-Descomprimir el zip y pasar esa carpeta a una ubicación segura.
-Agregar dentro de PATH (como variable de entorno) la ubicación a la carpeta “bin”.
-En Codeblocks: Settings > Compiler > Linker Settings: agregar ubicación a “lib\libcurl.dll.a”.
-En Codeblocks: Settings > Compiler > Search directories > Compiler y Resource compiler: agregar ubicación a “include”.
-En Codeblocks: Settings > Compiler > Search directories > Linker: agregar ubicación a “lib”.
+- Descargar curl desde: https://curl.se/windows (En caso de no usar Windows, https://curl.se/download.html).
+- Descomprimir el zip y pasar esa carpeta a una ubicación segura.
+- Agregar dentro de PATH (como variable de entorno) la ubicación a la carpeta “bin”.
+- En Codeblocks: Settings > Compiler > Linker Settings: agregar ubicación a “lib\libcurl.dll.a”.
+- En Codeblocks: Settings > Compiler > Search directories > Compiler y Resource compiler: agregar ubicación a “include”.
+- En Codeblocks: Settings > Compiler > Search directories > Linker: agregar ubicación a “lib”.
