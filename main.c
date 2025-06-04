@@ -1,38 +1,41 @@
-#include "Funciones_Juegos.h"
-#include "API.h"
+#include "prueba.h"
 #include "pila.h"
+#include "API.h"
 
-
-    int main()
+int main()
 {
-    //resetearGrupo("limite");
-
+    //resetearGrupo("limite"); //Descomentar en caso de querer hacer un DELETE de la API.
     char decision = ' ';
+    do
+    {
+        printf("\n\n\t\t----------------Menu DoCe----------------\n\n");
+        printf("\n\nOpciones\n\n");
+        printf("[A] Jugar\n[B] Ver Ranking\n[C] Salir\n");
 
-do {
-    printf("\n\n\t\t----------------Menu DoCe----------------\n\n");
-    printf("\n\nOpciones\n\n");
-    printf("[A] Jugar\n[B] Ver Ranking\n[C] Salir\n");
+        do
+        {
+            printf("\nElija una de las opciones: ");
+            scanf(" %c", &decision); // espacio antes de %c para consumir '\n' anterior
+            decision = AMAYUS(decision);
+        }
+        while (decision != 'A' && decision != 'B' && decision != 'C');
 
-    do {
-        printf("\nElija una de las opciones: ");
-        scanf(" %c", &decision); // espacio antes de %c para consumir '\n' anterior
-        decision = AMAYUS(decision);
-    } while (decision != 'A' && decision != 'B' && decision != 'C');
+        system("cls");
 
-    system("cls");
-
-    switch (decision) {
+        switch (decision)
+        {
         case 'A':
             printf("\n\n\t\t----------------Opciones de Dificultad----------------\n");
             printf("\n\n[A] Facil\n[B] Medio\n[C] Dificil\n");
 
             char dificultad;
-            do {
+            do
+            {
                 printf("\nElija una de las opciones: ");
                 scanf(" %c", &dificultad);
                 dificultad = AMAYUS(dificultad);
-            } while (dificultad != 'A' && dificultad != 'B' && dificultad != 'C');
+            }
+            while (dificultad != 'A' && dificultad != 'B' && dificultad != 'C');
 
             if (dificultad == 'A')
                 juego(elegirCartaFacil);
@@ -49,13 +52,13 @@ do {
         case 'C':
             printf("\n\tSe finalizo el juego. Hasta luego!\n");
             break;
+        }
+        printf("\n");
+        system("pause");
+        system("cls");
     }
+    while (decision != 'C');
 
-} while (decision != 'C');
-
-return 0;
-
-
+    return 0;
 
 }
-
