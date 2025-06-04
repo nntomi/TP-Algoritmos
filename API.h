@@ -7,3 +7,4 @@ void guardarRanking(const char *codigoGrupo, const char *nombreJugador, int esGa
 void resetearGrupo(const char *codigoGrupo);
 
 #endif // API_H_INCLUDED
+
