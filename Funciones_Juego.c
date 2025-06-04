@@ -2,14 +2,13 @@
 #include "pila.h"
 #include "time.h"
 #include "Lista_Dinamica.h"
-
-
+#include "API.h"
 int generarMazo(tPila* mazo,tCarta* mano1, tCarta* mano2, int inicio)
 {
     srand(time(NULL));
     int pos;
     int i=0;
-        tCantidadXTipo cantidadPorTipo[]=
+    tCantidadXTipo cantidadPorTipo[]=
     {
         {6, "MAS_2"},
         {10, "MAS_1"},
@@ -20,13 +19,13 @@ int generarMazo(tPila* mazo,tCarta* mano1, tCarta* mano2, int inicio)
     };
     if(inicio==1)
     {
-        for(i=0;i<3;i++)
+        for(i=0; i<3; i++)
         {
             pos=comparaCartas(&mano1->carta[i]);
             if(pos>=0 && pos<=5)
                 cantidadPorTipo[pos].cantidad--;
         }
-        for(i=0;i<3;i++)
+        for(i=0; i<3; i++)
         {
             pos=comparaCartas(&mano2->carta[i]);
             if(pos>=0 && pos<=5)
@@ -76,20 +75,19 @@ int comparaCartas(char * carta)
         return 4;
     if(strcmp(carta,"ESPEJO")==0)
         return 5;
-    return -1;
+    return CARTA_INVALIDA;
 }
 
 int repartir(tPila* mazo,tCarta* cartas,int pos)
 {
     desapilar(mazo,cartas[pos].carta,sizeof(tCarta));
-    return 0;
+    return OK;
 }
 
 int elegirCartaFacil(tJugador *jugador,tMaquina *maquina,char *UltimacartaJugador)
 {
     return(rand()%3);
 }
-
 
 void aplicarEfecto(char *carta, int* puntos, int* puntosoponente, int *miturno,char *cartaoponente)
 {
@@ -99,13 +97,13 @@ void aplicarEfecto(char *carta, int* puntos, int* puntosoponente, int *miturno,c
         *puntos += 2;
     else if (strcmp(carta,"MENOS_1") == 0)
     {
-       *puntosoponente-=1;
+        *puntosoponente-=1;
         if (*puntosoponente < 0)
             *puntosoponente = 0;
     }
     else if (strcmp(carta,"MENOS_2") == 0)
     {
-       *puntosoponente-=2;
+        *puntosoponente-=2;
         if (*puntosoponente < 0)
             *puntosoponente = 0;
     }
@@ -117,44 +115,31 @@ int elegirCartaJugador(tCarta* cartas,char* cartajugada)
 {
     int i,decision;
     printf("Cartas disponibles (seleccionar una):\n");
-    for(i=0;i<3;i++)
+    for(i=0; i<3; i++)
     {
         printf("[%d] %s\n",i+1,cartas->carta);
         cartas+=1;
     }
     cartas-=3;
 
-    do{
+    do
+    {
         printf("Decision:");
         scanf("%d",&decision);
         fflush(stdin);
-    }while(decision<1 || decision>3);
+    }
+    while(decision<1 || decision>3);
     decision--;
     strcpy(cartajugada,cartas[decision].carta);
     return decision;
 
 }
 
-int hayCartaEspejo(tCarta* cartas)
-{
-    int i;
-    for(i=0;i<3;i++)
-    {
-        if(strcmp(cartas->carta,"ESPEJO")==0)
-            return i;
-            //cartas+=1;
-    }
-    return -1;
-}
-
-
-
 int elegirCartaMedia(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador)
 {
-    int i = 0, posCero, posUno, posDos;
+    int i, posCero, posUno, posDos;
     int pos[3] = {0};
 
-    //printf("Decision de la maquina:\n");
     if(jugador->puntos == 0)
     {
         i = 0;
@@ -223,19 +208,20 @@ int elegirCartaMedia(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugad
 
 }
 
-int buscarValor(int pos[], int valor)
+int buscarValor(int *pos, int valor)
 {
     int i = 0;
 
     while(i < 3)
     {
-        if(pos[i] == valor)
+        if(*pos == valor)
             return i;
 
+        pos++;
         i++;
     }
 
-    return -1;
+    return CARTA_INVALIDA;
 }
 
 
@@ -244,7 +230,7 @@ int buscarValor(int pos[], int valor)
 int elegirCartaDificil(tJugador *jugador,tMaquina *maquina,char *UltimacartaJugador)
 {
 
-    int i=0,posUno,posDos,posCero,pos[3]={0},cartaBuena=0,jugadorataco=0;
+    int i=0,posUno,posDos,posCero,pos[3]= {0,0,0},cartaBuena=0,jugadorataco=0;
 
 
     while(i<3)
@@ -253,34 +239,27 @@ int elegirCartaDificil(tJugador *jugador,tMaquina *maquina,char *UltimacartaJuga
         if(strcmp(maquina->cartas[i].carta,"ESPEJO")==0)
 
         {
-
             pos[i]=1;
-
 
         }
 
 
 
         if(strcmp(maquina->cartas[i].carta,"REPETIR")==0)
-                {
-
-                    pos[i]= 2;
-
-                }
-
+        {
+            pos[i]= 2;
+        }
 
         if(strcmp(maquina->cartas[i].carta,"MAS_2")==0)
         {
-
             cartaBuena++;
-
         }
 
         if(strcmp(maquina->cartas[i].carta,"MAS_1")==0)
         {
             cartaBuena++;
         }
-    i++;
+        i++;
     }
 
     if(strcmp(UltimacartaJugador,"MENOS_1")==0 || strcmp(UltimacartaJugador,"MENOS_2")==0)
@@ -290,18 +269,18 @@ int elegirCartaDificil(tJugador *jugador,tMaquina *maquina,char *UltimacartaJuga
         if(posCero!=-1 && jugadorataco == 1)
         {
             return posCero; //Uso carta ESPEJO.
-        }else
+        }
+        else
         {
-            for(i=0;i<3;i++)
+            for(i=0; i<3; i++)
             {
                 if(pos[i]==1)
-                   {
-                       pos[i]=0;
-                   }  // Limpio el vector de la posicion porque no hay carta negativa.
+                {
+                    pos[i]=0;
+                }  // Limpio el vector en cada posición porque no hay carta negativa.
             }
         }
     }
-
 
     if(cartaBuena > 1 )
     {
@@ -310,47 +289,45 @@ int elegirCartaDificil(tJugador *jugador,tMaquina *maquina,char *UltimacartaJuga
             return posUno; // Uso REPETIR carta.
     }
 
-        for(i=0;i<3;i++)
-            pos[i]=0; //Limpio el vector.
+    for(i=0; i<3; i++)
+        pos[i]=0; //Limpio el vector.
 
-
-        if(jugador->puntos>7)
+    if(jugador->puntos>7)
+    {
+        i=0;
+        while(i<3)
         {
-            i=0;
-            while(i<3)
-            {
 
-                if(strcmp(maquina->cartas[i].carta,"REPETIR")==0)
-                    pos[i]= 1;
+            if(strcmp(maquina->cartas[i].carta,"REPETIR")==0)
+                pos[i]= 1;
 
-                if(strcmp(maquina->cartas[i].carta,"MENOS_2")==0)
-                    pos[i]=2;
+            if(strcmp(maquina->cartas[i].carta,"MENOS_2")==0)
+                pos[i]=2;
 
-                if(strcmp(maquina->cartas[i].carta,"MENOS_1")==0)
-                    pos[i]=3;
+            if(strcmp(maquina->cartas[i].carta,"MENOS_1")==0)
+                pos[i]=3;
 
-                i++;
-
-            }
+            i++;
+        }
 
 
-            posCero = buscarValor(pos,1); //REPETIR.
+        posCero = buscarValor(pos,1); //REPETIR.
 
-            if(posCero != -1 )
-                return posCero;
+        if(posCero != -1 )
+            return posCero;
 
-            posUno = buscarValor(pos,2); //MENOS_2.
+        posUno = buscarValor(pos,2); //MENOS_2.
 
-            if(posUno != -1)
-                return posUno;
+        if(posUno != -1)
+            return posUno;
 
-            posDos = buscarValor(pos,3); //MENOS_1.
+        posDos = buscarValor(pos,3); //MENOS_1.
 
-            if(posDos != -1)
-                return posDos;
+        if(posDos != -1)
+            return posDos;
 
-            }
-i=0;
+    }
+    i=0;
     while(i<3) //Si llegue hasta aca y no tengo una jugada estrategica se suma cualquier punto.
     {
         if (strcmp(maquina->cartas[i].carta, "MAS_2") == 0 || strcmp(maquina->cartas[i].carta, "MAS_1") == 0)
@@ -358,8 +335,8 @@ i=0;
         i++;
     }
 
-     return rand()%3;
-    //Jugar cualquiera si no encuentro nada.
+    return rand()%3;
+    //Jugar cualquiera si no encuentro una jugada estrategica.
 }
 
 void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador))
@@ -382,15 +359,14 @@ void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *Ultimacarta
     maquina.puntos=0;
     printf("Introduzca su nombre:");
     scanf("%s",jugador.nombre);
+    Amayuscula_cad(jugador.nombre);
     strcpy(maquina.nombre,"Maquina");
 
-
     generarMazo(&mazo,jugador.cartas,maquina.cartas,0);
-    for(i=0;i<3;i++)
+    for(i=0; i<3; i++)
         repartir(&mazo,jugador.cartas,i);
-    for(i=0;i<3;i++)
+    for(i=0; i<3; i++)
         repartir(&mazo,maquina.cartas,i);
-
 
     while(jugador.puntos<12 && maquina.puntos<12)
     {
@@ -415,13 +391,12 @@ void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *Ultimacarta
                     if(strcmp(cartaJugada, "MENOS_1") != 0 && strcmp(cartaJugada, "MENOS_2") != 0)
                         aplicarEfecto(cartaJugada,&jugador.puntos,&maquina.puntos,&miturno,"");
                 }
-
             }
             else
             {
                 decision=elegirCartaJugador(jugador.cartas,cartaJugada);
                 if(strcmp(cartaJugada,"MENOS_1") != 0 && strcmp(cartaJugada,"MENOS_2") != 0)
-                   aplicarEfecto(cartaJugada,&jugador.puntos,&maquina.puntos,&miturno,"");
+                    aplicarEfecto(cartaJugada,&jugador.puntos,&maquina.puntos,&miturno,"");
             }
 
 
@@ -434,7 +409,6 @@ void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *Ultimacarta
 
             ponerAlFinal(&informe,&registroInf,sizeof(registroInf));
 
-
             repartir(&mazo,jugador.cartas,decision);
             if(pilaVacia(&mazo))
                 generarMazo(&mazo,jugador.cartas,maquina.cartas,1);
@@ -443,7 +417,6 @@ void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *Ultimacarta
         miturno=1;
         while(miturno==1 && jugador.puntos<12)
         {
-
             miturno=0;
 
             if(strcmp(cartaJugada,"MENOS_1")==0 || strcmp(cartaJugada,"MENOS_2")==0)
@@ -469,8 +442,6 @@ void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *Ultimacarta
             printf("Decision de la maquina:\n");
             printf("Jugo la carta: %s\n\n",cartaMaquina);
 
-
-
             registroInf.turno=turno;
             strcpy(registroInf.carta,cartaMaquina);
             registroInf.puntos=maquina.puntos;
@@ -478,17 +449,11 @@ void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *Ultimacarta
 
             ponerAlFinal(&informe,&registroInf,sizeof(registroInf));
 
-
-
             repartir(&mazo,maquina.cartas,decision);
             if(pilaVacia(&mazo))
                 generarMazo(&mazo,jugador.cartas,maquina.cartas,1);
         }
-
-
         system("pause");
-
-
         turno++;
     }
 
@@ -499,7 +464,8 @@ void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *Ultimacarta
         guardarRanking("limite",jugador.nombre,1);
     }
     else
-    {   guardarRanking("limite",jugador.nombre,0);
+    {
+        guardarRanking("limite",jugador.nombre,0);
         printf("La maquina gano.\n");
     }
     system("cls");
@@ -507,7 +473,7 @@ void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *Ultimacarta
     mmap(&informe,muestraInforme);
     generarInforme(&informe,&jugador,&maquina);
 
-    system("pause");
+
 }
 
 void muestraInforme(void * informe)
@@ -534,7 +500,7 @@ int generarInforme(tLista* informe,tJugador* jugador, tMaquina* maquina)
     if(fp==NULL)
     {
         printf("No se pudo generar informe.");
-        return -1;
+        return ERROR;
     }
     if(jugador->puntos>=12)
         fprintf(fp,"Ganador:%s\n\n",jugador->nombre);
@@ -557,6 +523,13 @@ int generarInforme(tLista* informe,tJugador* jugador, tMaquina* maquina)
     }
 
     fclose(fp);
-    return 0;
+    return OK;
 }
-
+void Amayuscula_cad(char *cadena) {
+    while (*cadena) {
+        if (*cadena >= 'a' && *cadena <= 'z') {
+            *cadena = *cadena - ('a' - 'A');
+        }
+        cadena++;
+    }
+}
