@@ -1,4 +1,4 @@
-#include "prueba.h"
+#include "Funciones_Juego.h"
 #include "pila.h"
 #include "time.h"
 #include "Lista_Dinamica.h"
