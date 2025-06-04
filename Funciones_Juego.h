@@ -1,5 +1,5 @@
-#ifndef PRUEBA_H_INCLUDED
-#define PRUEBA_H_INCLUDED
+#ifndef FUNCIONES_JUEGO_H_INCLUDED
+#define FUNCIONES_JUEGO_H_INCLUDED
 
 #include "Pila.h"
 #include "Lista_Dinamica.h"
@@ -59,4 +59,4 @@ void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *Ultimacarta
 void muestraInforme(void * informe);
 int generarInforme(tLista* informe,tJugador* jugador, tMaquina* maquina);
 void Amayuscula_cad(char *cadena);
-#endif // PRUEBA_H_INCLUDED
+#endif // FUNCIONES_JUEGO_H_INCLUDED
