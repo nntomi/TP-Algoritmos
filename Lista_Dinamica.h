@@ -30,5 +30,5 @@ void mmap(tLista* lista,void accion(void*a));
 int cmp_int(void *a,void*b);
 int insertarordenadolista(tLista *lista,void *dato,unsigned cantBytes,int cmp(void*,void*));
 
-#endif // PILA_DINAMICA_H_INCLUDED
+#endif // LISTA_DINAMICA_H_INCLUDED
 
