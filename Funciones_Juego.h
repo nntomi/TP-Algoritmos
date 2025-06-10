@@ -46,17 +46,18 @@ typedef struct
     int puntos;
 } tInforme;
 
-int comparaCartas(char * carta);
+int comparaCartas(const char * carta);
 int generarMazo(tPila* mazo,tCarta* mano1, tCarta* mano2,int inicio);
 int repartir(tPila* mazo,tCarta* cartas,int pos);
 void aplicarEfecto(char *carta, int* puntos, int* puntosoponente, int *miturno,char *cartaoponente);
 int elegirCartaJugador(tCarta* cartas,char* cartajugada);
-int elegirCartaFacil(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador);
-int elegirCartaMedia(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador);
-int elegirCartaDificil(tJugador *jugador,tMaquina *maquina,char *UltimacartaJugador);
-int buscarValor(int *pos, int valor);
-void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador)); //Es generica para la elección de dificultad.
+int elegirCartaFacil(const tJugador *jugador,const tMaquina *maquina,const char *UltimacartaJugador);
+int elegirCartaMedia(const tJugador *jugador,const tMaquina *maquina,const char *UltimacartaJugador);
+int elegirCartaDificil(const tJugador *jugador,const tMaquina *maquina,const char *UltimacartaJugador);
+int buscarValor(const int *pos, const int valor);
+void juego(int dificultad(const tJugador *jugador, const tMaquina *maquina,const char *UltimacartaJugador)); //Es generica para la elección de dificultad.
 void muestraInforme(void * informe);
 int generarInforme(tLista* informe,tJugador* jugador, tMaquina* maquina);
 void Amayuscula_cad(char *cadena);
 #endif // FUNCIONES_JUEGO_H_INCLUDED
+
