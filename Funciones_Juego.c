@@ -61,7 +61,7 @@ int generarMazo(tPila* mazo,tCarta* mano1, tCarta* mano2, int inicio)
     return 0;
 }
 
-int comparaCartas(char * carta)
+int comparaCartas( const char * carta)
 {
     if(strcmp(carta,"MAS_2")==0)
         return 0;
@@ -84,7 +84,7 @@ int repartir(tPila* mazo,tCarta* cartas,int pos)
     return OK;
 }
 
-int elegirCartaFacil(tJugador *jugador,tMaquina *maquina,char *UltimacartaJugador)
+int elegirCartaFacil(const tJugador *jugador,const tMaquina *maquina,const char *UltimacartaJugador)
 {
     return(rand()%3);
 }
@@ -135,7 +135,7 @@ int elegirCartaJugador(tCarta* cartas,char* cartajugada)
 
 }
 
-int elegirCartaMedia(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador)
+int elegirCartaMedia(const tJugador *jugador,const tMaquina *maquina,const char *UltimacartaJugador)
 {
     int i, posCero, posUno, posDos;
     int pos[3] = {0};
@@ -208,7 +208,7 @@ int elegirCartaMedia(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugad
 
 }
 
-int buscarValor(int *pos, int valor)
+int buscarValor(const int *pos, const int valor)
 {
     int i = 0;
 
@@ -227,7 +227,7 @@ int buscarValor(int *pos, int valor)
 
 
 
-int elegirCartaDificil(tJugador *jugador,tMaquina *maquina,char *UltimacartaJugador)
+int elegirCartaDificil(const tJugador *jugador,const tMaquina *maquina,const char *UltimacartaJugador)
 {
 
     int i=0,posUno,posDos,posCero,pos[3]= {0,0,0},cartaBuena=0,jugadorataco=0;
@@ -339,7 +339,7 @@ int elegirCartaDificil(tJugador *jugador,tMaquina *maquina,char *UltimacartaJuga
     //Jugar cualquiera si no encuentro una jugada estrategica.
 }
 
-void juego(int dificultad(tJugador *jugador, tMaquina *maquina,char *UltimacartaJugador))
+void juego(int dificultad(const tJugador *jugador, const tMaquina *maquina,const char *UltimacartaJugador))
 {
     int miturno=1;
     char cartaJugada[15]="";
@@ -525,7 +525,8 @@ int generarInforme(tLista* informe,tJugador* jugador, tMaquina* maquina)
     fclose(fp);
     return OK;
 }
-void Amayuscula_cad(char *cadena) {
+void Amayuscula_cad(char *cadena)
+{
     while (*cadena) {
         if (*cadena >= 'a' && *cadena <= 'z') {
             *cadena = *cadena - ('a' - 'A');
