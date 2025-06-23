@@ -1,100 +1,5 @@
 # depslib dependency file v1.0
-1584205420 source:d:\onedrive\unlam 2\algoritmos\tp\tp-algoritmos\main.c
-	<stdio.h>
-	<stdlib.h>
-
-1746558232 source:d:\onedrive\unlam 2\algoritmos\tp\tp-algoritmos\prueba.c
-
-1748539764 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\prueba.c
-	"prueba.h"
-	"pila.h"
-	"time.h"
-
-1748541144 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\main.c
-	<stdio.h>
-	<stdlib.h>
-	"prueba.h"
-	"pila.h"
-
-1748373696 c:\users\marco\onedrive\documents\github\tp-algoritmos\prueba.h
-	"Pila.h"
-
-1746158676 source:c:\users\marco\onedrive\documents\github\tp-algoritmos\pila.c
-	"Pila.h"
-
-1745341630 c:\users\marco\onedrive\documents\github\tp-algoritmos\pila.h
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-
-1748905455 source:c:\users\usuario\desktop\tp-algoritmos 1\main.c
-	"prueba.h"
-	"pila.h"
-
-1748905479 c:\users\usuario\desktop\tp-algoritmos 1\prueba.h
-	"Pila.h"
-	"Lista_Dinamica.h"
-	<stdlib.h>
-	<string.h>
-	<stdio.h>
-	<curl/curl.h>
-
-1748547371 c:\users\usuario\desktop\tp-algoritmos 1\pila.h
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-
-1748547371 source:c:\users\usuario\desktop\tp-algoritmos 1\pila.c
-	"Pila.h"
-
-1748912466 source:c:\users\usuario\desktop\tp-algoritmos 1\prueba.c
-	"prueba.h"
-	"pila.h"
-	"time.h"
-	"Lista_Dinamica.h"
-
-1748550067 source:c:\users\marco\onedrive\desktop\tp-algoritmos 1\main.c
-	<stdio.h>
-	<stdlib.h>
-	"prueba.h"
-	"pila.h"
-
-1748638951 c:\users\marco\onedrive\desktop\tp-algoritmos 1\prueba.h
-	"Pila.h"
-	"Lista_Dinamica.h"
-
-1748547371 c:\users\marco\onedrive\desktop\tp-algoritmos 1\pila.h
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-
-1748547371 source:c:\users\marco\onedrive\desktop\tp-algoritmos 1\pila.c
-	"Pila.h"
-
-1748640628 source:c:\users\marco\onedrive\desktop\tp-algoritmos 1\prueba.c
-	"prueba.h"
-	"pila.h"
-	"time.h"
-	"Lista_Dinamica.h"
-
-1748638776 source:c:\users\marco\onedrive\desktop\tp-algoritmos 1\lista_dinamica.c
-	"Lista_Dinamica.h"
-
-1748638534 c:\users\marco\onedrive\desktop\tp-algoritmos 1\lista_dinamica.h
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-
-1748638776 source:c:\users\usuario\desktop\tp-algoritmos 1\lista_dinamica.c
-	"Lista_Dinamica.h"
-
-1748638534 c:\users\usuario\desktop\tp-algoritmos 1\lista_dinamica.h
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-
-1748912511 source:c:\users\usuario\desktop\tp-algoritmos 1\api.c
-	"prueba.h"
+1749520405 source:c:\users\usuario\desktop\tp_algoritmos_2025_1c_umbral\api.c
 	<curl/curl.h>
 
 1748421710 c:\curl\include\curl\curl.h
@@ -150,49 +55,14 @@
 
 1748421710 c:\curl\include\curl\typecheck-gcc.h
 
-1748925727 source:d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\api.c
-	"prueba.h"
-	<curl/curl.h>
-
-1748905479 d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\prueba.h
-	"Pila.h"
-	"Lista_Dinamica.h"
-	<stdlib.h>
-	<string.h>
-	<stdio.h>
-	<curl/curl.h>
-
-1748547371 d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\pila.h
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-
-1748638534 d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\lista_dinamica.h
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-
-1748638776 source:d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\lista_dinamica.c
-	"Lista_Dinamica.h"
-
-1748905455 source:d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\main.c
-	"prueba.h"
-	"pila.h"
-
-1748547371 source:d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\pila.c
-	"Pila.h"
-
-1748912466 source:d:\onedrive\unlam 2\algoritmos\tp-algoritmos 1\tp-algoritmos 1\prueba.c
-	"prueba.h"
+1749520405 source:c:\users\usuario\desktop\tp_algoritmos_2025_1c_umbral\funciones_juego.c
+	"Funciones_Juego.h"
 	"pila.h"
 	"time.h"
 	"Lista_Dinamica.h"
+	"API.h"
 
-1748925727 source:d:\onedrive\documentos\github\tp-algoritmos\api.c
-	"prueba.h"
-	<curl/curl.h>
-
-1748905479 d:\onedrive\documentos\github\tp-algoritmos\prueba.h
+1749520405 c:\users\usuario\desktop\tp_algoritmos_2025_1c_umbral\funciones_juego.h
 	"Pila.h"
 	"Lista_Dinamica.h"
 	<stdlib.h>
@@ -200,82 +70,27 @@
 	<stdio.h>
 	<curl/curl.h>
 
-1748547371 d:\onedrive\documentos\github\tp-algoritmos\pila.h
+1749520405 c:\users\usuario\desktop\tp_algoritmos_2025_1c_umbral\pila.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1748638534 d:\onedrive\documentos\github\tp-algoritmos\lista_dinamica.h
+1749520405 c:\users\usuario\desktop\tp_algoritmos_2025_1c_umbral\lista_dinamica.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1748638776 source:d:\onedrive\documentos\github\tp-algoritmos\lista_dinamica.c
+1749520405 c:\users\usuario\desktop\tp_algoritmos_2025_1c_umbral\api.h
+
+1749520405 source:c:\users\usuario\desktop\tp_algoritmos_2025_1c_umbral\lista_dinamica.c
 	"Lista_Dinamica.h"
 
-1748905455 source:d:\onedrive\documentos\github\tp-algoritmos\main.c
-	"prueba.h"
+1749520405 source:c:\users\usuario\desktop\tp_algoritmos_2025_1c_umbral\main.c
+	"Funciones_Juego.h"
 	"pila.h"
+	"API.h"
 
-1748547371 source:d:\onedrive\documentos\github\tp-algoritmos\pila.c
+1749520405 source:c:\users\usuario\desktop\tp_algoritmos_2025_1c_umbral\pila.c
 	"Pila.h"
 
-1748962839 source:d:\onedrive\documentos\github\tp-algoritmos\prueba.c
-	"prueba.h"
-	"pila.h"
-	"time.h"
-	"Lista_Dinamica.h"
-
-1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\curl.h
-	"curlver.h"
-	"system.h"
-	<stdio.h>
-	<limits.h>
-	<sys/param.h>
-	<sys/types.h>
-	<time.h>
-	<winsock2.h>
-	<ws2tcpip.h>
-	<sys/select.h>
-	<sys/socket.h>
-	<sys/time.h>
-	"easy.h"
-	"multi.h"
-	"urlapi.h"
-	"options.h"
-	"header.h"
-	"websockets.h"
-	"mprintf.h"
-	"typecheck-gcc.h"
-
-1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\curlver.h
-
-1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\system.h
-	<ConditionalMacros.h>
-	<inttypes.h>
-	<inttypes.h>
-	<sys/types.h>
-	<sys/socket.h>
-	<sys/poll.h>
-
-1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\easy.h
-
-1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\multi.h
-	"curl.h"
-
-1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\urlapi.h
-	"curl.h"
-
-1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\options.h
-
-1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\header.h
-
-1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\websockets.h
-
-1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\mprintf.h
-	<stdarg.h>
-	<stdio.h>
-	"curl.h"
-
-1743583662 d:\onedrive\documentos\github\tp-algoritmos\include\curl\typecheck-gcc.h
 
