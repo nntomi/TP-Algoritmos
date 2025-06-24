@@ -13,14 +13,15 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="C:/curl/include" />
+					<Add directory="API/include" />
 				</Compiler>
 				<ResourceCompiler>
-					<Add directory="C:/curl/include" />
+					<Add directory="API/include" />
 				</ResourceCompiler>
 				<Linker>
-					<Add library="C:/curl/lib/libcurl.dll.a" />
-					<Add directory="C:/curl/lib" />
+					<Add library="API/lib/libcurl.a" />
+					<Add library="API/lib/libcurl.dll.a" />
+					<Add directory="API/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -33,15 +34,24 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="API/lib/libcurl.a" />
+					<Add library="API/lib/libcurl.dll.a" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="API/include" />
 		</Compiler>
+		<Linker>
+			<Add library="API/lib/libcurl.a" />
+			<Add library="API/lib/libcurl.dll.a" />
+			<Add directory="API/lib" />
+		</Linker>
 		<Unit filename="API.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="API.h" />
 		<Unit filename="Funciones_Juego.c">
 			<Option compilerVar="CC" />
 		</Unit>
