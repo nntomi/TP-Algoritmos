@@ -93,4 +93,192 @@
 1749520405 source:c:\users\usuario\desktop\tp_algoritmos_2025_1c_umbral\pila.c
 	"Pila.h"
 
+1750642542 source:c:\users\usuario\desktop\tp-algoritmos-main\api.c
+	<curl/curl.h>
+
+1750645625 source:c:\users\usuario\desktop\tp-algoritmos-main\funciones_juego.c
+	"Funciones_Juego.h"
+	"pila.h"
+	"time.h"
+	"Lista_Dinamica.h"
+	"API.h"
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\funciones_juego.h
+	"Pila.h"
+	"Lista_Dinamica.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<curl/curl.h>
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\pila.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\lista_dinamica.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\api.h
+
+1750642542 source:c:\users\usuario\desktop\tp-algoritmos-main\lista_dinamica.c
+	"Lista_Dinamica.h"
+
+1750642542 source:c:\users\usuario\desktop\tp-algoritmos-main\main.c
+	"Funciones_Juego.h"
+	"pila.h"
+	"API.h"
+
+1750642542 source:c:\users\usuario\desktop\tp-algoritmos-main\pila.c
+	"Pila.h"
+
+1750642542 source:c:\users\marco\onedrive\desktop\tp-algoritmos-main\api.c
+	<curl/curl.h>
+
+1750645625 source:c:\users\marco\onedrive\desktop\tp-algoritmos-main\funciones_juego.c
+	"Funciones_Juego.h"
+	"pila.h"
+	"time.h"
+	"Lista_Dinamica.h"
+	"API.h"
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\funciones_juego.h
+	"Pila.h"
+	"Lista_Dinamica.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<curl/curl.h>
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\pila.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\lista_dinamica.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\api.h
+
+1750642542 source:c:\users\marco\onedrive\desktop\tp-algoritmos-main\lista_dinamica.c
+	"Lista_Dinamica.h"
+
+1750642542 source:c:\users\marco\onedrive\desktop\tp-algoritmos-main\main.c
+	"Funciones_Juego.h"
+	"pila.h"
+	"API.h"
+
+1750642542 source:c:\users\marco\onedrive\desktop\tp-algoritmos-main\pila.c
+	"Pila.h"
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\api\include\curl\curl.h
+	"curlver.h"
+	"system.h"
+	<stdio.h>
+	<limits.h>
+	<sys/param.h>
+	<sys/types.h>
+	<time.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/select.h>
+	<sys/socket.h>
+	<sys/time.h>
+	"easy.h"
+	"multi.h"
+	"urlapi.h"
+	"options.h"
+	"header.h"
+	"websockets.h"
+	"mprintf.h"
+	"typecheck-gcc.h"
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\api\include\curl\curlver.h
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\api\include\curl\system.h
+	<ConditionalMacros.h>
+	<inttypes.h>
+	<inttypes.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\api\include\curl\easy.h
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\api\include\curl\multi.h
+	"curl.h"
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\api\include\curl\urlapi.h
+	"curl.h"
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\api\include\curl\options.h
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\api\include\curl\header.h
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\api\include\curl\websockets.h
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\api\include\curl\mprintf.h
+	<stdarg.h>
+	<stdio.h>
+	"curl.h"
+
+1750642542 c:\users\marco\onedrive\desktop\tp-algoritmos-main\api\include\curl\typecheck-gcc.h
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\api\include\curl\curl.h
+	"curlver.h"
+	"system.h"
+	<stdio.h>
+	<limits.h>
+	<sys/param.h>
+	<sys/types.h>
+	<time.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/select.h>
+	<sys/socket.h>
+	<sys/time.h>
+	"easy.h"
+	"multi.h"
+	"urlapi.h"
+	"options.h"
+	"header.h"
+	"websockets.h"
+	"mprintf.h"
+	"typecheck-gcc.h"
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\api\include\curl\curlver.h
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\api\include\curl\system.h
+	<ConditionalMacros.h>
+	<inttypes.h>
+	<inttypes.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\api\include\curl\easy.h
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\api\include\curl\multi.h
+	"curl.h"
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\api\include\curl\urlapi.h
+	"curl.h"
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\api\include\curl\options.h
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\api\include\curl\header.h
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\api\include\curl\websockets.h
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\api\include\curl\mprintf.h
+	<stdarg.h>
+	<stdio.h>
+	"curl.h"
+
+1750642542 c:\users\usuario\desktop\tp-algoritmos-main\api\include\curl\typecheck-gcc.h
+
 
